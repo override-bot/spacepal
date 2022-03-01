@@ -1,4 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:spacepal/core/models/staff_model.dart';
 import 'package:spacepal/core/services/userapi.dart';
@@ -17,11 +16,11 @@ class UserViewModel extends ChangeNotifier {
     var doc = await userApi.getDocumentById(id);
     return Staff.fromMap(doc.data() as Map<String, dynamic>, doc.id);
   }
-  Future createStaffProfile(Staff data){
-        var result = userApi.addData(data.toJson());
-        return result;
-  }
-    updateData(Staff data, String id){
-      return userApi.updateData(data.toJson(), id);
-    }
+  makeAdmin(userId){
+    Map<String, dynamic> data = {
+          "isAdmin" : true,
+    };
+    return userApi.updateData(data, userId);
+      }
+
 }

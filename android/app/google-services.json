@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "714249705646",
+    "project_id": "spacepal-d9c3c",
+    "storage_bucket": "spacepal-d9c3c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:714249705646:android:9180fc5d4084e55677f53f",
+        "android_client_info": {
+          "package_name": "com.example.spacepal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "714249705646-en9kfnq9elm9t8u0u2uqb1eivsnu6ag5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMszneY4gFCrzP8Arnak3sdMb2xuBSgJs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "714249705646-en9kfnq9elm9t8u0u2uqb1eivsnu6ag5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

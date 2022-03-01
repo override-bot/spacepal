@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 class UserApi{
         final _db = FirebaseFirestore.instance;
-        final String path = 'posts';
+        final String path = 'staff';
       late  CollectionReference ref;
         
         UserApi(){
