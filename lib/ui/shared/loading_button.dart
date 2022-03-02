@@ -20,7 +20,7 @@ class LoadingButtonState extends State<LoadingButton>{
   @override
   Widget build(BuildContext context) {
         return Container(
-            width: MediaQuery.of(context).size.width,
+            width: MediaQuery.of(context).size.width/1.3,
             color: Colors.blue[600],
             height: 50,
             child: MaterialButton(onPressed:(){widget.isLoading == true ? null : widget.onPressed;},
