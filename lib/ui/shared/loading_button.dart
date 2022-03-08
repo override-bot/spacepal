@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 class LoadingButton extends StatefulWidget {
   final String? label;
   final bool? isLoading;
-  final Function? onPressed;
+  final Function()?onPressed;
  const LoadingButton({
     @required
     this.label,
     @required
     this.isLoading,
-    @required
+   @required
     this.onPressed
   });
 
@@ -21,9 +21,14 @@ class LoadingButtonState extends State<LoadingButton>{
   Widget build(BuildContext context) {
         return Container(
             width: MediaQuery.of(context).size.width/1.3,
-            color: Colors.blue[600],
+            
             height: 50,
-            child: MaterialButton(onPressed:(){widget.isLoading == true ? null : widget.onPressed;},
+            decoration: BoxDecoration(
+                color: Colors.blue[600],
+                borderRadius: BorderRadius.circular(15)
+            ),
+            margin:const EdgeInsets.only(bottom:10),
+            child: MaterialButton(onPressed:widget.onPressed,
             child: widget.isLoading == true ? const Center(child: CircularProgressIndicator(color: Colors.white,)):Text(
                     widget.label ?? "",
                     style:const TextStyle(

@@ -23,6 +23,8 @@ class PostApi{
        Future<DocumentReference> addData(Map data){
          return ref.add(data);
        }
-
+        Stream<QuerySnapshot> streamImportantDocuments(){
+          return ref.where("isImportant", isEqualTo: true).snapshots();
+        }
 
 }

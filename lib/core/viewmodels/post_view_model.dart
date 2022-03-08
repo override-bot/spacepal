@@ -6,7 +6,7 @@ import 'package:spacepal/locator.dart';
 
 class PostViewModel extends ChangeNotifier {
 
-  PostApi postApi = locator<PostApi>();
+  PostApi postApi = PostApi();
   List<Posts> posts = [];
   Future<List<Posts>> getPosts() async{
       var result = await postApi.getDocuments();
@@ -24,5 +24,8 @@ class PostViewModel extends ChangeNotifier {
   Future addPosts(Posts data){
         var result = postApi.addData(data.toJson());
         return result;
+  }
+  Stream<QuerySnapshot> streamImportantPosts(){
+    return postApi.streamImportantDocuments();
   }
 }

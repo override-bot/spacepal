@@ -1,18 +1,18 @@
 class Staff{
      String? uid;
-     String? username;
-     String? email;
-     bool? isAdmin;
-     String? imageUrl;
-     String? unit;
+     String username;
+     String email;
+     bool isAdmin;
+     String imageUrl;
+     String unit;
 
      Staff({
-       this.email,
-       this.imageUrl,
-       this.isAdmin,
+      required this.email,
+      required this.imageUrl,
+      required this.isAdmin,
        this.uid,
-       this.username,
-       this.unit
+      required this.username,
+      required this.unit
      });
      
 
@@ -20,14 +20,17 @@ class Staff{
         : email = snapshot['email'],
           isAdmin = snapshot['isAdmin'],
           imageUrl = snapshot['imageUrl'],
-          username = snapshot['username'];
+          username = snapshot['username'],
+          unit = snapshot['unit'];
+        
 
     toJson(){
       return{
         "email":email,
         "isAdmin": isAdmin,
         "imageUrl": imageUrl,
-        "username": username
+        "username": username,
+        "unit": unit
       };
     }
 }

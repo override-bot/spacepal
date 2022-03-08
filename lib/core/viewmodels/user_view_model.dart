@@ -3,7 +3,7 @@ import 'package:spacepal/core/models/staff_model.dart';
 import 'package:spacepal/core/services/userapi.dart';
 import 'package:spacepal/locator.dart';
 class UserViewModel extends ChangeNotifier {
-   UserApi userApi = locator<UserApi>();
+   UserApi userApi = UserApi();
    List<Staff> staff = [];
     Future<List<Staff>> getAllStaff() async{
       var result = await userApi.getDocuments();

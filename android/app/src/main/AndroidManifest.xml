@@ -2,7 +2,8 @@
     package="com.example.spacepal">
    <application
         android:label="spacepal"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/ic_launcher"
+        android:name="${applicationName}">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
