@@ -100,13 +100,25 @@
             loadMainDartJs();
         }
     </script>
-    <script type="module">
-        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js'; import { analytics } from 'https://www.gstatic.com/firebasejs/9.6.7/firebase-analytics.js'; import { auth } from 'https://www.gstatic.com/firebasejs/9.6.7/firebase-auth.js';
-        import { firestore } from 'https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore.js'; import { firebaseStorage } from 'https://www.gstatic.com/firebasejs/9.6.7/firebase-storage.js'; const firebaseConfig = { apiKey: "AIzaSyCdIx3Ei4s0TDc-mxTYGPCfak44iQ4WKvA",
-        authDomain: "spacepal-d9c3c.firebaseapp.com", projectId: "spacepal-d9c3c", storageBucket: "spacepal-d9c3c.appspot.com", messagingSenderId: "714249705646", appId: "1:714249705646:web:64e1f94162962c4677f53f", measurementId: "G-TJ5B2B8D3G" }; const
-        app = initializeApp(firebaseConfig); const analytics = getAnalytics(app);
-    </script>
+    
 
 </body>
-
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+   
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+<script>
+ 
+      const app = initializeApp(
+       { 
+      apiKey: "AIzaSyCdIx3Ei4s0TDc-mxTYGPCfak44iQ4WKvA",
+      authDomain: "spacepal-d9c3c.firebaseapp.com", 
+      projectId: "spacepal-d9c3c", storageBucket: "spacepal-d9c3c.appspot.com",
+      messagingSenderId: "714249705646", 
+      appId: "1:714249705646:web:64e1f94162962c4677f53f", 
+      measurementId: "G-TJ5B2B8D3G" }
+      ); 
+      const analytics = getAnalytics(app);
+</script>
 </html>
